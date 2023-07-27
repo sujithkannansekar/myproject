@@ -1,0 +1,365 @@
+<html>
+    <head>
+      {% load static %}
+      <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+
+        <style>
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: rgb(20, 22, 26);
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: aliceblue;
+}
+
+.carousel-inner img {
+    width: 1920px;
+    height: 500px;}
+
+#carousel{margin-top: 200px;}
+
+
+#destination {
+ 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+#topdestination {
+  color: black;
+  margin-left: 70px;
+  
+}
+#gridt {
+  columns: 5 200px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+#gridt div {
+  width: 150px;
+  margin: 0 1.5rem 1.5rem 0;
+  display: inline-block;
+  width: 100%;
+  border: solid 2px black;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+}
+#gridt div:hover img {
+  filter: grayscale(0);
+}
+#gridt div:hover {
+  border-color: coral;
+}
+#gridt div img {
+  width: 100%;
+  filter: grayscale(100%);
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+}
+#gridt div p {
+  margin: 5px 0;
+  padding: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+#sub{text-align: center;
+background-color: #d2f7ed;}
+
+footer{background-color: black;
+  display: flex; justify-content: space-between;}
+
+#foot{margin-left: 25px;
+color: white;
+}
+
+#follow{margin-right: 500px;}
+
+
+#gride {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0px;
+  
+  padding: 10px;
+}
+
+#gride > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.transh{position: relative;
+width: 50%;}
+
+.overlay{position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+height: 200px;
+width: 300px;
+opacity: 0;
+transition: .5s ease;
+background-color: whitesmoke;
+overflow: hidden;}
+
+.transh:hover .overlay{
+  opacity: 1;
+  width: 100%;
+  left: 0;
+}
+
+.text{color: yellowgreen;
+font-size: 25px;
+font-family:fantasy;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+-ms-transform: translate(-50%,-50%);}
+
+.gallery{float: left;}
+
+.gallery{margin-left: 60px;}
+
+.logo{
+  width: 120px;
+height: 120px;
+margin-left: 0%;
+margin-top: 0%;}
+
+
+.brandname{margin-top: 25px;
+float: right;
+color: black;}
+
+.logolink{display: flex;}
+
+a.footertext{color: white;}
+        </style>
+
+    </head>
+<br>
+    <body>
+      <a class="logolink" href="#Home">
+      <img src="{% static '4-removebg-preview.png' %}" alt="" class="logo">
+        <h1 class="brandname">twelve48</h1>
+      </a>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+
+          <br><br><br> <br><br>
+
+    <div id="sub">   
+<h1>Find your next stay</h1>
+<p>More Destinations. More Ease. More Affordable.</p>
+</div> 
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+          
+            <!-- Indicators -->
+        
+       <ul class="carousel-indicators">
+           <li data-target="#carousel" data-slide-to="0" class="active"></li>
+           <li data-target="#carousel" data-slide-to="1"></li>
+           <li data-target="#carousel" data-slide-to="2"></li>
+           <li data-target="#carousel" data-slide-to="3"></li>
+           <li data-target="#carousel" data-slide-to="4"></li>
+           <li data-target="#carousel" data-slide-to="5"></li>
+       </ul>
+     
+       <!-- The slideshow -->
+       
+       <div class="carousel-inner">
+           <div class="carousel-item active"> <a href="/allarctic" target="_blank"><img src="{% static 'arctic carousel.png' %}" alt="arctic"><div class="carousel-caption" id="cap"><h2>Arctic</h2><p>To look more</p></div></a></div>
+        <div class="carousel-item"><a href="/allisland" target="_blank"> <img src="{% static 'island carousel.png' %}" alt="island"> <div class="carousel-caption" id="cap"><h2>Island</h2><p>To look more</p></div></a></div>
+        <div class="carousel-item"><a href="/allfarms" target="_blank"><img src="{% static 'farms carousel.png' %}" alt="farms"><div class="carousel-caption" id="cap"><h2>Farms</h2><p>To look more</p></div></a></div>
+        <div class="carousel-item"><a href="/alldesign" target="_blank"><img src="{% static 'design carousel.png' %}" alt="design"><div class="carousel-caption" id="cap"><h2>Design</h2><p>To look more</p></div></a></div>
+        <div class="carousel-item"><a href="/alltinyhome" target="_blank"><img src="{% static 'tinyhouse carousel.png' %}" alt="tinyhome"><div class="carousel-caption" id="cap"><h2>Tinyhomes</h2><p>To look more</p></div></a></div>
+        <div class="carousel-item"><a href="/alltopofworld" target="_blank"><img src="{% static 'top of the world carousel.png' %}" alt="top of the world"><div class="carousel-caption" id="cap"><h2>Top of the world</h2><p>To look more</p></div></a></div>
+       </div>
+       
+       <!-- Left and right controls -->
+       
+       <a class="carousel-control-prev" href="#carousel" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+       <a class="carousel-control-next" href="#carousel" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+       </div>
+     
+<br><br><br><br><br>
+
+
+  <div class="container">
+    <h1> Explore India</h1>
+    <p style="color: lightslategrey;">popular destination of India</p>
+<div class="gal">
+<div class="gallery">
+  <div class="transh">
+<a href=""><img src="{% static 'goa homepage.jpg' %}"  style="height: 200px; width: 300px;">
+    <div class="overlay"><div class="text"> Goa</div></div>
+</a>
+  </div>
+</div>
+
+
+<div class="gallery">
+  <div class="transh">
+<a href=""><img src="{% static 'chennai homepage.jpg' %}"  style="height: 200px; width: 300px;">
+    <div class="overlay"><div class="text">Chennai</div></div>
+</a>
+  </div>
+</div>
+
+
+<div class="gallery">
+  <div class="transh">
+<a href=""><img src="{% static 'kolkata homepage.jpg' %}"  style="height: 200px; width: 300px;">
+    <div class="overlay"><div class="text">kolkata</div></div>
+</a>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+<div class="gallery">
+  <div class="transh">
+<a href=""><img src="{% static 'mumbai homepage.jpg' %}"  style="height: 200px; width: 300px;">
+    <div class="overlay"><div class="text">Mumbai</div></div>
+</a>
+  </div>
+</div>
+
+  
+<div class="gallery">
+  <div class="transh">
+<a href=""><img src="{% static 'hyderabad homepage.jpg' %}"  style="height: 200px; width: 300px;">
+    <div class="overlay"><div class="text">Hyderabad</div></div>
+</a>
+  </div>
+</div>
+
+<div class="gallery">
+  <div class="transh">
+<a href=""><img src="{% static 'bangalore homepage.jpg' %}"  style="height: 200px; width: 300px;">
+    <div class="overlay"><div class="text">Bangalore</div></div>
+</a>
+  </div>
+</div>
+</div>
+
+     
+  </div>
+
+<br><br><br>
+
+  
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+<div id="destination">
+  <h1 id="topdestination">Top destination</h1><br>
+<div id="gridt" class="grid-container">
+  <div>
+    <img class='grid-item grid-item-1' src="{% static 'maldives homepage.jpg' %}" alt=''>
+    <p>Maldives</p>
+  </div>
+  <div>
+    <img class='grid-item grid-item-2' src="{% static 'andaman homepage.jpg' %}" alt=''>
+    <p>Andaman and Nicobar</p>
+  </div>
+  <div>
+    <img class='grid-item grid-item-3' src="{% static 'manali homepage.jpg' %}" alt=''>
+    <p>Manali</p>
+  </div>
+  <div>
+    <img class='grid-item grid-item-4' src="{% static 'kashmir homepage.jpg' %}" alt=''>
+    <p>kashmir</p>
+  </div>
+  <div>
+    <img class='grid-item grid-item-5' src="{% static 'bali homepage.jpg' %}" alt=''>
+    <p>Bali</p>
+  </div>
+  <div>
+    <img class='grid-item grid-item-6' src="{% static 'paris homepage.jpg' %}" alt=''>
+    <p>Paris</p>
+  </div>
+  <div>
+    <img class='grid-item grid-item-7' src="{% static 'ooty homepage.jpg' %}" alt=''>
+    <p>Ooty</p>
+  </div>
+  <div>
+    <img class='grid-item grid-item-8' src="{% static 'coorg homepage.jpg' %}" alt=''>
+    <p>Coorg</p>
+  </div>
+  <div>
+    <img class='grid-item grid-item-9' src="{% static 'jaipur homepage.jpg' %}" alt=''>
+    <p>Jaipur</p>
+  </div>
+  <div>
+    <img class='grid-item grid-item-10' src="{% static 'munnar homepage.jpg' %}" alt=''>
+    <p>Munnar</p>
+  </div>
+
+</div>
+</div>
+<br><br><br>
+
+<footer>
+  
+  <div id="foot">
+  <a class="footertext" href="/Helpcentre">Help centre</a><br><br>
+  <a class="footertext" href="/Howwework">How we work</a><br><br>
+  <a class="footertext" href="">About us</a><br><br>
+  <a class="footertext" href="/termsandconditions">Terms and conditions</a><br><br>
+  <a class="footertext" href="/cancallationpolicy">Cancellation option</a>
+</div>
+<div id="follow">
+  <p>Follow us on</p>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-instagram" viewBox="0 0 16 16">
+    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+  </svg><br><br>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-facebook" viewBox="0 0 16 16">
+    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+  </svg><br><br>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-twitter" viewBox="0 0 16 16">
+    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+  </svg>
+</div>
+</footer>
+
+</body>
+</html>
+
+
+

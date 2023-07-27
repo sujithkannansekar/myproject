@@ -1,0 +1,93 @@
+<html>
+    <head>
+      {% load static %}
+      <title>Help centre</title>
+        <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1"> 
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      </head>
+
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+         
+        }
+        
+        li {
+          float: right;
+        }
+        
+        li a {
+          display: block;
+          color: rgb(20, 22, 26);
+          text-align: center;
+          padding: 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          background-color: aliceblue;
+        }
+
+        .heading{text-align: center;}
+        
+.logo{
+  width: 120px;
+height: 120px;
+margin-left: 0%;
+margin-top: 0%;}
+
+
+.brandname{margin-top: 25px;
+float: right;
+color: black;}
+
+.logolink{display: flex;}
+
+    </style>
+    
+<br>
+<body>
+  <a class="logolink" href="/home">
+  <img src="{% static '4-removebg-preview.png' %}" alt="" class="logo">
+    <h1 class="brandname">twelve48</h1>
+  </a>
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+
+          <br><br><br>
+
+          <div class="container">
+            <h1 class="heading">Help center</h1>
+            <br><br>
+
+      <p>  A help center or customer support section on a hotel booking page is designed to assist users with any inquiries, issues, or concerns they may have regarding their bookings. The specific structure and content of a help center can vary between different hotel booking platforms, but here are some common features and information you may find:</p>
+      <br><br>
+      <p>1. Frequently Asked Questions (FAQs): The help center often includes a section with frequently asked questions related to the booking process, reservations, cancellations, payments, and other common topics. This section aims to provide quick answers to common queries.</p>
+      <br><br>
+      <p>2. Contact Information: The help center typically provides contact details for customer support, such as a helpline phone number, email address, or live chat option. These channels allow users to reach out to the support team for more personalized assistance.</p>
+      <br><br>
+      <p>3. Booking Assistance: The help center may offer guidance on how to search for hotels, choose room types, modify or cancel bookings, and navigate the booking platform's features. It may include step-by-step instructions or tutorials to help users make the most of the website.</p>
+      <br><br>
+      <p>4. Policies and Terms: The help center often contains information about the booking platform's policies, terms and conditions, privacy policy, and any other legal or contractual agreements. This helps users understand the rules and guidelines associated with their bookings.</p>
+      <br><br>
+      <p>5. Refunds and Cancellations: The help center may have a dedicated section that provides detailed information about the cancellation policy, refund processes, and any associated fees or penalties. This section can help users understand their options and guide them through the necessary steps if they need to cancel a reservation.</p>
+      <br><br>
+      <p>6. Technical Support: If users encounter technical issues or errors while using the booking page, the help center may provide troubleshooting tips or instructions. This can include clearing cache and cookies, ensuring compatibility with browsers, or resolving common technical problems.</p>
+      <br><br>
+      <p>7. Feedback and Reviews: Some hotel booking pages include a feedback or review section within the help center. This allows users to share their experiences, provide suggestions, or leave reviews about the booking platform or specific hotels they have booked through the site.</p>
+      <br><br>
+      <p>Remember, the specific content and organization of a hotel booking page's help center may vary. It's always a good idea to explore the help center or customer support section on the booking page you are using to find detailed information and assistance related to your specific questions or concerns.</p>
+          </div>
+         </body>
+</html>
